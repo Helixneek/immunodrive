@@ -9,8 +9,11 @@ public class Shooter : MonoBehaviour
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileLifetime = 5f;
 
+    [Header("Player")]
+    [SerializeField] float playerFiringRate = 1f;
+
     [Header("AI")]
-    [SerializeField] float firingRate = 2f;
+    [SerializeField] float enemyFiringRate = 2f;
     [SerializeField] float firingRateVariance = 0f;
     [SerializeField] float minimumFiringRate = 0.1f;
     [SerializeField] bool useAI;
@@ -65,12 +68,18 @@ public class Shooter : MonoBehaviour
                 rb.velocity = transform.right * projectileSpeed;
             }
 
-            float bulletSpawnTime = Random.Range(firingRate - firingRateVariance, firingRate + firingRateVariance);
+            float bulletSpawnTime = Random.Range(enemyFiringRate - firingRateVariance, enemyFiringRate + firingRateVariance);
 
             audioPlayer.PlayShootingClip();
 
             Destroy(instance, projectileLifetime);
-            yield return new WaitForSeconds(Mathf.Clamp(bulletSpawnTime, minimumFiringRate, float.MaxValue));
+
+            if(useAI == true) {
+                yield return new WaitForSeconds(Mathf.Clamp(bulletSpawnTime, minimumFiringRate, float.MaxValue));
+            } else {
+                yield return new WaitForSeconds(playerFiringRate);
+            }
+            
         }
     }
 }
