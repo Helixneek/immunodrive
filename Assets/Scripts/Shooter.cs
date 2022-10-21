@@ -11,6 +11,7 @@ public class Shooter : MonoBehaviour
 
     [Header("Player")]
     [SerializeField] float playerFiringRate = 1f;
+    [SerializeField] public bool doubleShot;
 
     [Header("AI")]
     [SerializeField] float enemyFiringRate = 2f;
@@ -23,6 +24,8 @@ public class Shooter : MonoBehaviour
     AudioPlayer audioPlayer;
 
     Coroutine firingCoroutine;
+
+    GameObject instance;
 
     void Awake() {
         audioPlayer = FindObjectOfType<AudioPlayer>();
@@ -58,7 +61,7 @@ public class Shooter : MonoBehaviour
     IEnumerator FireContinously() {
 
         while(true) {
-            GameObject instance = Instantiate(projectilePrefab, 
+                GameObject instance = Instantiate(projectilePrefab, 
                                                 transform.position, 
                                                 Quaternion.Euler(0, 0, 270));
 

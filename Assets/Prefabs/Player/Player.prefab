@@ -175,6 +175,7 @@ MonoBehaviour:
   healthPoints: 100
   score: 0
   hitEffect: {fileID: 0}
+  applyCameraShake: 0
 --- !u!114 &1723666894116696477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +191,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8271087291294012158, guid: 687c9946bf0e87d449cd3390a93de9c6, type: 3}
   projectileSpeed: 10
   projectileLifetime: 5
-  firingRate: 1
+  playerFiringRate: 1
+  enemyFiringRate: 2
   firingRateVariance: 0
   minimumFiringRate: 0.1
   useAI: 0
@@ -207,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4339ee00c65af4d8aced4188c65300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 5
+  MoveSpeed: 7
   paddingLeft: 1
   paddingRight: 1
   paddingTop: 1

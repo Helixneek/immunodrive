@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] bool isPlayer;
-    [SerializeField] int healthPoints = 50;
+    [SerializeField] public int healthPoints = 50;
     [SerializeField] int score = 50;
     [SerializeField] ParticleSystem hitEffect;
     
@@ -20,7 +20,7 @@ public class Health : MonoBehaviour
     }
 
     void Awake() {
-        cameraShake = Camera.main.GetComponent < CameraShake >();
+        cameraShake = Camera.main.GetComponent<CameraShake>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
         levelManager = FindObjectOfType<LevelManager>();

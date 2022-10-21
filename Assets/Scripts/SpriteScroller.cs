@@ -11,7 +11,8 @@ public class SpriteScroller : MonoBehaviour
 
     void Awake()
     {
-        material = GetComponent<SpriteRenderer>().material;
+        Renderer renderer = GetComponent<Renderer>();
+        material = renderer.material;
     }
 
     void Update()
