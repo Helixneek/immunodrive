@@ -9,8 +9,8 @@ public class Health : MonoBehaviour
     [SerializeField] int score = 50;
     [SerializeField] ParticleSystem hitEffect;
     
-    // [SerializeField] bool applyCameraShake;
-    // CameraShake cameraShake;
+    [SerializeField] bool applyCameraShake;
+    CameraShake cameraShake;
     AudioPlayer audioPlayer;
     ScoreKeeper scoreKeeper;
     LevelManager levelManager;
@@ -20,7 +20,7 @@ public class Health : MonoBehaviour
     }
 
     void Awake() {
-        // cameraShake = Camera.main.GetComponent < CameraShake >();
+        cameraShake = Camera.main.GetComponent < CameraShake >();
         audioPlayer = FindObjectOfType<AudioPlayer>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
         levelManager = FindObjectOfType<LevelManager>();
@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
             TakeDamage(damageDealer.GetDamage());
             PlayHitEffect();
             audioPlayer.PlayDamageClip();
-            // ShakeCamera();
+            ShakeCamera();
             damageDealer.GetHit();  
         }
     }
@@ -64,9 +64,9 @@ public class Health : MonoBehaviour
         }
     }
 
-    //void ShakeCamera() {
-    //    if(cameraShake != null && applyCameraShake) {
-    //            cameraShake.Play();
-    //    }
-    //}
+    void ShakeCamera() {
+        if(cameraShake != null && applyCameraShake) {
+                cameraShake.Play();
+        }
+    }
 }

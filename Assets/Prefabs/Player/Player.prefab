@@ -97,8 +97,8 @@ GameObject:
   - component: {fileID: 1723666894116696474}
   - component: {fileID: 1723666894116696476}
   - component: {fileID: 1723666894116696477}
-  - component: {fileID: 1723666894116696423}
   - component: {fileID: 1723666894116696422}
+  - component: {fileID: 1723666894116696423}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -195,6 +195,23 @@ MonoBehaviour:
   minimumFiringRate: 0.1
   useAI: 0
   isFiring: 0
+--- !u!114 &1723666894116696422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723666894116696479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4339ee00c65af4d8aced4188c65300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 5
+  paddingLeft: 1
+  paddingRight: 1
+  paddingTop: 1
+  paddingBottom: 1
 --- !u!114 &1723666894116696423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,20 +242,3 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1723666894116696422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723666894116696479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a4339ee00c65af4d8aced4188c65300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 5
-  paddingLeft: 1
-  paddingRight: 1
-  paddingTop: 2
-  paddingBottom: 2

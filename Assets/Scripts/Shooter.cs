@@ -63,9 +63,14 @@ public class Shooter : MonoBehaviour
                                                 Quaternion.Euler(0, 0, 270));
 
             Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
-            if(rb != null) {
+            if(rb != null && useAI == false) {
                 
                 rb.velocity = transform.right * projectileSpeed;
+
+            } else if(rb != null && useAI == true) {
+
+                rb.velocity = -transform.right * projectileSpeed;
+
             }
 
             float bulletSpawnTime = Random.Range(enemyFiringRate - firingRateVariance, enemyFiringRate + firingRateVariance);
