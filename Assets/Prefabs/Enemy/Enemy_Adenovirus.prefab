@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3710746386284449415}
   - component: {fileID: 3710746386284449411}
   - component: {fileID: -8131968298001587697}
+  - component: {fileID: 130326103023804896}
   m_Layer: 7
   m_Name: Enemy_Adenovirus
   m_TagString: Untagged
@@ -90,6 +91,7 @@ MonoBehaviour:
   healthPoints: 30
   score: 50
   hitEffect: {fileID: 0}
+  applyCameraShake: 0
 --- !u!114 &3710746386284449411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61bcbc440ce33e439ae6e048660764a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 10
+  damageValue: 30
 --- !u!114 &-8131968298001587697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,11 +121,25 @@ MonoBehaviour:
   projectileSpeed: 10
   projectileLifetime: 5
   playerFiringRate: 1
-  enemyFiringRate: 2
-  firingRateVariance: 0
-  minimumFiringRate: 0.1
+  doubleShoot: 0
+  enemyFiringRate: 1.2
+  firingRateVariance: 0.2
+  minimumFiringRate: 0.6
   useAI: 1
   isFiring: 0
+--- !u!114 &130326103023804896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710746386284449414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4c0b7bfecbb65d4f8ede3f13d4d6ffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveConfig: {fileID: 11400000, guid: dcbf4d9fed00a894bb55bbfffcf7fbd0, type: 2}
 --- !u!1 &3710746386465962662
 GameObject:
   m_ObjectHideFlags: 0

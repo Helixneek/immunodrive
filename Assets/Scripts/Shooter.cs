@@ -11,7 +11,7 @@ public class Shooter : MonoBehaviour
 
     [Header("Player")]
     [SerializeField] float playerFiringRate = 1f;
-    [SerializeField] public bool doubleShot;
+    [SerializeField] bool doubleShoot;
 
     [Header("AI")]
     [SerializeField] float enemyFiringRate = 2f;
@@ -61,9 +61,9 @@ public class Shooter : MonoBehaviour
     IEnumerator FireContinously() {
 
         while(true) {
-                GameObject instance = Instantiate(projectilePrefab, 
-                                                transform.position, 
-                                                Quaternion.Euler(0, 0, 270));
+            GameObject instance = Instantiate(projectilePrefab, 
+                                            transform.position, 
+                                            Quaternion.Euler(0, 0, 270));
 
             Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
             if(rb != null && useAI == false) {
