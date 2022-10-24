@@ -9,9 +9,9 @@ public class Inventory
     public Inventory() {
         itemList = new List<Items>();
 
-        AddItem(new Items { itemType = Items.ItemType.TypeA, amount = 1});
-        AddItem(new Items { itemType = Items.ItemType.TypeB, amount = 2});
-        AddItem(new Items { itemType = Items.ItemType.TypeC, amount = 3});
+        AddItem(new Items { itemType = Items.ItemType.DamageUp, amount = 5});
+        AddItem(new Items { itemType = Items.ItemType.SpeedUp, amount = 2});
+        AddItem(new Items { itemType = Items.ItemType.HealthUp, amount = 30});
         Debug.Log(itemList.Count);
     }
 
