@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class Items
 {
     public enum ItemType {
-        DamageUp,
-        SpeedUp,
-        HealthUp,
-        FireRateUp,
-        ShotMod,
-        MoreGuns
+        damageUp,
+        speedUp,
+        healthUp,
+        firerateUp,
+        shotMod,
+        moreGuns
     }
 
     public ItemType itemType;
@@ -20,16 +20,18 @@ public class Items
     public float spdUp;
     public float hpUp;
     public float rofUp;
+    public int shotModID;
 
     public Sprite GetSprite() {
         switch(itemType) {
-            default:
-                case ItemType.DamageUp:     return ItemAssets.Instance.DamageUpSprite;
-                case ItemType.SpeedUp:      return ItemAssets.Instance.SpeedUpSprite;
-                case ItemType.HealthUp:     return ItemAssets.Instance.HealthUpSprite;
-                case ItemType.FireRateUp:   return ItemAssets.Instance.FireRateUpSprite;
-                case ItemType.ShotMod:      return ItemAssets.Instance.ShotModSprite;
-                case ItemType.MoreGuns:     return ItemAssets.Instance.MoreGunsSprite;
+           default:
+                case ItemType.damageUp:     return ItemAssets.Instance.DamageUpSprite;
+                case ItemType.speedUp:      return ItemAssets.Instance.SpeedUpSprite;
+                case ItemType.healthUp:     return ItemAssets.Instance.HealthUpSprite;
+                case ItemType.firerateUp:   return ItemAssets.Instance.FireRateUpSprite;
+                case ItemType.shotMod:      return ItemAssets.Instance.ShotModSprite;
+                case ItemType.moreGuns:     return ItemAssets.Instance.MoreGunSprite;
         }
+        
     }
 }

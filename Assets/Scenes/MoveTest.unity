@@ -210,56 +210,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136159525}
   m_CullTransparentMesh: 1
---- !u!1 &347025272
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 347025274}
-  - component: {fileID: 347025273}
-  m_Layer: 0
-  m_Name: Item Assets
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &347025273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347025272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08bee836bff23564788be1bccc8a4690, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageUpSprite: {fileID: 21300000, guid: 12e0ab8d838dbc14681bd7fd012c17ac, type: 3}
-  SpeedUpSprite: {fileID: 21300000, guid: 12e0ab8d838dbc14681bd7fd012c17ac, type: 3}
-  HealthUpSprite: {fileID: 21300000, guid: 12e0ab8d838dbc14681bd7fd012c17ac, type: 3}
-  FireRateUpSprite: {fileID: 0}
-  ShotModSprite: {fileID: 21300000, guid: 12e0ab8d838dbc14681bd7fd012c17ac, type: 3}
-  MoreGunsSprite: {fileID: 21300000, guid: 12e0ab8d838dbc14681bd7fd012c17ac, type: 3}
---- !u!4 &347025274
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347025272}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.028053, y: 66.77426, z: 2.3715518}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &574267877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -606,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d827d6308858442408d84e6ca6dbf537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: {x: 0.5, y: 0.1}
+  moveSpeed: {x: 0, y: 0}
 --- !u!1 &861134694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,8 +1332,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -428, y: -369}
-  m_SizeDelta: {x: 1000, y: 300}
+  m_AnchoredPosition: {x: -545.387, y: -372.453}
+  m_SizeDelta: {x: 765.226, y: 293.095}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433851950
 MonoBehaviour:
@@ -1398,14 +1348,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4745098}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 469e709957ab8814e96247f149033bba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1423,6 +1373,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433851948}
   m_CullTransparentMesh: 1
+--- !u!1 &1452471830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1452471832}
+  - component: {fileID: 1452471831}
+  m_Layer: 0
+  m_Name: UpgradeStorage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1452471831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452471830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08bee836bff23564788be1bccc8a4690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageUpSprite: {fileID: 21300000, guid: afbf503f47d2b55429b9b7554b8453e4, type: 3}
+  SpeedUpSprite: {fileID: 21300000, guid: 9171c6e24b8ecd3429d4cbed433da11c, type: 3}
+  HealthUpSprite: {fileID: 21300000, guid: 710e8eb0a3341ea4eb9275b28ea24168, type: 3}
+  FireRateUpSprite: {fileID: 21300000, guid: 5666c58a34f0c1c43b705e70042d955f, type: 3}
+  ShotModSprite: {fileID: 21300000, guid: a0f9b513565037a40ad2344cbe510af3, type: 3}
+  MoreGunsSprite: {fileID: 21300000, guid: 3198aaaee5b47b14c98aea204ab0b68d, type: 3}
+--- !u!4 &1452471832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452471830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 111.31738, y: 62.688828, z: -0.42940167}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519920897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,7 +1565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1549750395
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1864,7 +1864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1631997142
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1920,7 +1920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -856, y: -291.99997}
+  m_AnchoredPosition: {x: -840, y: -317}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2018182972
@@ -2202,6 +2202,14 @@ PrefabInstance:
     - target: {fileID: 4510634566139229129, guid: 89d44179e2839634785951ed4118c009, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510634566209328981, guid: 89d44179e2839634785951ed4118c009, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510634566209328981, guid: 89d44179e2839634785951ed4118c009, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1070332391
       objectReference: {fileID: 0}
     - target: {fileID: 4510634566209328983, guid: 89d44179e2839634785951ed4118c009, type: 3}
       propertyPath: m_Layer

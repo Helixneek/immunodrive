@@ -31,6 +31,8 @@ public class PlayerMove : MonoBehaviour
 
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
+
+        Debug.Log(inventory.GetDamage());
     }
 
     void Update()

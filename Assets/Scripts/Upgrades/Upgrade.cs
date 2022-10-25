@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Upgrade : MonoBehaviour
+[CreateAssetMenu(fileName = "New Upgrade", menuName = "Player Upgrade")]
+public class Upgrade : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string upgradeName;
+    public string itemType;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Sprite artwork;
+
+    public float dmgUp;
+    public float spdUp;
+    public float hpUp;
+    public float rofUp;
+    public int shotModID;
 }
