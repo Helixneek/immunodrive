@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
+    [Header("Movement and Bounds")]
     [SerializeField] float MoveSpeed = 5f;
     Vector2 rawInput;
 
@@ -15,14 +16,21 @@ public class PlayerMove : MonoBehaviour
     
     Vector2 minBounds;
     Vector2 maxBounds;
+
+    [Header("Inventory")]
+    [SerializeField] private UI_Inventory uiInventory;
+    private Inventory inventory;
     Shooter shooter;
 
-    void Awake() {
+    private void Awake() {
         shooter = GetComponent<Shooter>();
     }
 
     void Start() {
         initBounds();
+
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
     }
 
     void Update()

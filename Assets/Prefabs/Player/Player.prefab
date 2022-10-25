@@ -334,7 +334,7 @@ MonoBehaviour:
   healthPoints: 50
   score: 50
   hitEffect: {fileID: 0}
-  applyCameraShake: 0
+  applyCameraShake: 1
 --- !u!114 &4510634566752428462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,6 +374,7 @@ MonoBehaviour:
   paddingRight: 1
   paddingTop: 1
   paddingBottom: 1
+  uiInventory: {fileID: 0}
 --- !u!114 &4510634566752428464
 MonoBehaviour:
   m_ObjectHideFlags: 0

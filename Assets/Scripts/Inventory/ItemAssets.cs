@@ -10,10 +10,11 @@ public class ItemAssets : MonoBehaviour
         Instance = this;
     }
 
-    public Sprite DamageUp;
-    public Sprite SpeedUp;
-    public Sprite HealthUp;
-    public Sprite ShotMod;
-    public Sprite MoreGuns;
+    public Sprite DamageUpSprite;
+    public Sprite SpeedUpSprite;
+    public Sprite HealthUpSprite;
+    public Sprite FireRateUpSprite;
+    public Sprite ShotModSprite;
+    public Sprite MoreGunsSprite;
 
 }
