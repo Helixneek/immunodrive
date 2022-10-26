@@ -22,8 +22,19 @@ public class PlayerMove : MonoBehaviour
     private Inventory inventory;
     Shooter shooter;
 
+    public static PlayerMove Instance { get; private set; }
+
     private void Awake() {
         shooter = GetComponent<Shooter>();
+
+        if (Instance != null && Instance != this) 
+        { 
+            Destroy(this); 
+        } 
+        else 
+        { 
+            Instance = this; 
+        } 
     }
 
     void Start() {

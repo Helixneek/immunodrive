@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2955000605551573713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2955000605551573727}
+  - component: {fileID: 2955000605551573712}
+  m_Layer: 0
+  m_Name: UpgradeStorage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2955000605551573727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2955000605551573713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 111.31738, y: 62.688828, z: -0.42940167}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2955000605551573712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2955000605551573713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08bee836bff23564788be1bccc8a4690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageUpSprite: {fileID: 21300000, guid: 56ec17eaa2f28824c8ef7c9649d8818a, type: 3}
+  SpeedUpSprite: {fileID: 21300000, guid: de812fd75948eed4083549b155f6aa96, type: 3}
+  HealthUpSprite: {fileID: 21300000, guid: 30261ea26cdf38e4ca401451adf54cd0, type: 3}
+  FireRateUpSprite: {fileID: 21300000, guid: 7617e82423d6d8d4896b2ee0e5569a49, type: 3}
+  ShotModSprite: {fileID: 21300000, guid: d9e576dc12bc7c94dbb6513895dc3d6c, type: 3}
+  MoreGunSprite: {fileID: 21300000, guid: 0b0b111ec2ee6ce4d83b451ee9ed5528, type: 3}

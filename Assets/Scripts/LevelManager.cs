@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+     public Animator animator;
+
+     private int levelToLoad;
+     
     [SerializeField] float gameOverLoadDelay = 2f;
 
    public void LoadGame() {
           Debug.Log("Load game");
-          // SceneManager.LoadScene("Game");
+          //SceneManager.LoadScene(1);
+          FadeToLevel(1);
    }
 
    public void LoadOptions() {
@@ -22,7 +27,7 @@ public class LevelManager : MonoBehaviour
    }
 
    public void LoadGameOver() {
-        StartCoroutine(WaitAndLoad("Game Over", gameOverLoadDelay));
+        StartCoroutine(WaitAndLoad(0, gameOverLoadDelay));
    }
 
    public void QuitGame() {
@@ -30,8 +35,19 @@ public class LevelManager : MonoBehaviour
         Application.Quit();
    }
 
-   IEnumerator WaitAndLoad(string sceneName, float delay) {
+   IEnumerator WaitAndLoad(int sceneIndex, float delay) {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneIndex);
+   }
+
+   public void FadeToLevel (int levelIndex) {
+          if(animator.gameObject.activeSelf) {
+               levelToLoad = levelIndex;
+               animator.SetTrigger("FadeOut");
+          }
+   }
+
+   public void OnFadeComplete() {
+          SceneManager.LoadScene(levelToLoad);
    }
 }

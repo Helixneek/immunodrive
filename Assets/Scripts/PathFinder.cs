@@ -5,7 +5,7 @@ using UnityEngine;
 public class PathFinder : MonoBehaviour
 {
     EnemySpawn enemySpawner;
-    WaveConfigSO waveConfig;
+    [SerializeField] WaveConfigSO waveConfig;
     List<Transform> waypoints;
     int waypointIndex = 0;
 
@@ -30,7 +30,7 @@ public class PathFinder : MonoBehaviour
             Vector3 targetPos = waypoints[waypointIndex].position;
             float delta = waveConfig.GetMoveSpeed() * Time.deltaTime;
             
-            transform.position = Vector2.MoveTowards(transform.position, targetPos, delta);
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, delta);
 
             if(transform.position == targetPos) {
                 waypointIndex++;

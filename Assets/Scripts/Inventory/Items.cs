@@ -15,10 +15,10 @@ public class Items
     }
 
     public ItemType itemType;
-    public string upgradeName;
-    public float dmgUp;
+    public int level;
+    public int dmgUp;
     public float spdUp;
-    public float hpUp;
+    public int hpUp;
     public float rofUp;
     public int shotModID;
 

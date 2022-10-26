@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c5e49b6dfc5314187c7f370c910953, type: 3}
   m_Name: MembraneMelter
   m_EditorClassIdentifier: 
-  name: Membrane Melter
-  description: More powerful enzymes for effective cell breaching
-  type: DamageUp
+  upgradeName: Membrane Melter
+  itemType: Damage Up
   artwork: {fileID: 21300000, guid: 86a5c464f51ba2c428016398db1dde9a, type: 3}
-  damage: 5
-  speed: 0
-  health: 0
-  firerate: 0
+  dmgUp: 5
+  spdUp: 0
+  hpUp: 0
+  rofUp: 0
   shotModID: 0

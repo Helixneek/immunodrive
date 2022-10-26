@@ -29,12 +29,19 @@ public class Health : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
 
-        if(damageDealer != null) {
+        if(damageDealer != null && isPlayer == false) {
+            TakeDamage(damageDealer.GetPlayerDamage());
+            PlayHitEffect();
+            audioPlayer.PlayDamageClip();
+            ShakeCamera();
+            damageDealer.GetHit();
+
+        } else if(damageDealer != null && isPlayer) {
             TakeDamage(damageDealer.GetDamage());
             PlayHitEffect();
             audioPlayer.PlayDamageClip();
             ShakeCamera();
-            damageDealer.GetHit();  
+            damageDealer.GetHit(); 
         }
     }
 

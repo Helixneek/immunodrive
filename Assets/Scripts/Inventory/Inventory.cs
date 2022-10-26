@@ -8,60 +8,63 @@ public class Inventory
     public event EventHandler OnListChange;
     public List<Items> itemList;
 
-    float tempDamage;
+    int tempDamage;
+    float tempSpeed;
+    int tempHP;
+    float tempROF;
 
     public Inventory() {
         itemList = new List<Items>();
         
         AddItem(new Items { itemType = Items.ItemType.damageUp, 
-                            upgradeName = "Membrane Melter",
-                            dmgUp = 5f,
+                            level = 1,
+                            dmgUp = 21,
                             spdUp = 0f,
-                            hpUp = 0f,
+                            hpUp = 0,
                             rofUp = 0f,
                             shotModID = 0});
 
-        AddItem(new Items { itemType = Items.ItemType.speedUp, 
-                            upgradeName = "ATP Efficiency",
-                            dmgUp = 0f,
+        AddItem(new Items { itemType = Items.ItemType.speedUp,
+                            level = 1, 
+                            dmgUp = 0,
                             spdUp = 5f,
-                            hpUp = 0f,
+                            hpUp = 0,
                             rofUp = 0f,
                             shotModID = 0});
         
         AddItem(new Items { itemType = Items.ItemType.moreGuns, 
-                            upgradeName = "Flexible Fibres",
-                            dmgUp = 0f,
+                            level = 1,
+                            dmgUp = 0,
                             spdUp = 3f,
-                            hpUp = 0f,
+                            hpUp = 0,
                             rofUp = 0f,
                             shotModID = 0});
         
         AddItem(new Items { itemType = Items.ItemType.healthUp, 
-                            upgradeName = "Flexible Fibres",
-                            dmgUp = 0f,
+                            level = 1,
+                            dmgUp = 0,
                             spdUp = 3f,
-                            hpUp = 0f,
+                            hpUp = 0,
                             rofUp = 0f,
                             shotModID = 0});
 
         AddItem(new Items { itemType = Items.ItemType.firerateUp, 
-                            upgradeName = "Flexible Fibres",
-                            dmgUp = 0f,
+                            level = 1,
+                            dmgUp = 0,
                             spdUp = 3f,
-                            hpUp = 0f,
+                            hpUp = 0,
                             rofUp = 0f,
                             shotModID = 0});
         
-        AddItem(new Items { itemType = Items.ItemType.shotMod, 
-                            upgradeName = "Flexible Fibres",
-                            dmgUp = 0f,
-                            spdUp = 3f,
-                            hpUp = 0f,
+        AddItem(new Items { itemType = Items.ItemType.moreGuns, 
+                            level = 0,
+                            dmgUp = 0,
+                            spdUp = 0f,
+                            hpUp = 0,
                             rofUp = 0f,
                             shotModID = 0});
 
-        Debug.Log(itemList.Count);
+        //Debug.Log(itemList.Count + " upgrades");
     }
 
     public void AddItem(Items item) {
@@ -73,11 +76,35 @@ public class Inventory
         return itemList;
     }
 
-    public float GetDamage() {
+    public int GetDamage() {
         foreach(Items item in itemList) {
             tempDamage += item.dmgUp;
         }
 
         return tempDamage;
+    }
+
+    public float GetSpeed() {
+        foreach(Items item in itemList) {
+            tempSpeed += item.spdUp;
+        }
+
+        return tempSpeed;
+    }
+
+    public int GetHealth() {
+        foreach(Items item in itemList) {
+            tempHP += item.hpUp;
+        }
+
+        return tempHP;
+    }
+
+    public float GetROF() {
+        foreach(Items item in itemList) {
+            tempROF += item.rofUp;
+        }
+
+        return tempROF;
     }
 }
