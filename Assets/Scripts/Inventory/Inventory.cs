@@ -12,49 +12,42 @@ public class Inventory
     float tempSpeed;
     int tempHP;
     float tempROF;
+    int tempGuns;
 
     public Inventory() {
         itemList = new List<Items>();
         
         AddItem(new Items { itemType = Items.ItemType.damageUp, 
-                            level = 1,
-                            dmgUp = 21,
+                            level = 0,
+                            dmgUp = 5,
                             spdUp = 0f,
                             hpUp = 0,
                             rofUp = 0f,
-                            shotModID = 0});
+                            moreguns = 0});
 
         AddItem(new Items { itemType = Items.ItemType.speedUp,
-                            level = 1, 
+                            level = 0, 
                             dmgUp = 0,
-                            spdUp = 5f,
+                            spdUp = 2f,
                             hpUp = 0,
                             rofUp = 0f,
-                            shotModID = 0});
-        
-        AddItem(new Items { itemType = Items.ItemType.moreGuns, 
-                            level = 1,
-                            dmgUp = 0,
-                            spdUp = 3f,
-                            hpUp = 0,
-                            rofUp = 0f,
-                            shotModID = 0});
+                            moreguns = 0});
         
         AddItem(new Items { itemType = Items.ItemType.healthUp, 
-                            level = 1,
+                            level = 0,
                             dmgUp = 0,
-                            spdUp = 3f,
-                            hpUp = 0,
+                            spdUp = 0f,
+                            hpUp = 20,
                             rofUp = 0f,
-                            shotModID = 0});
+                            moreguns = 0});
 
         AddItem(new Items { itemType = Items.ItemType.firerateUp, 
-                            level = 1,
+                            level = 0,
                             dmgUp = 0,
-                            spdUp = 3f,
+                            spdUp = 0f,
                             hpUp = 0,
-                            rofUp = 0f,
-                            shotModID = 0});
+                            rofUp = 0.05f,
+                            moreguns = 0});
         
         AddItem(new Items { itemType = Items.ItemType.moreGuns, 
                             level = 0,
@@ -62,7 +55,7 @@ public class Inventory
                             spdUp = 0f,
                             hpUp = 0,
                             rofUp = 0f,
-                            shotModID = 0});
+                            moreguns = 1});
 
         //Debug.Log(itemList.Count + " upgrades");
     }
@@ -78,7 +71,7 @@ public class Inventory
 
     public int GetDamage() {
         foreach(Items item in itemList) {
-            tempDamage += item.dmgUp;
+            tempDamage += item.dmgUp * item.level;
         }
 
         return tempDamage;
@@ -86,7 +79,7 @@ public class Inventory
 
     public float GetSpeed() {
         foreach(Items item in itemList) {
-            tempSpeed += item.spdUp;
+            tempSpeed += item.spdUp * item.level;
         }
 
         return tempSpeed;
@@ -94,7 +87,7 @@ public class Inventory
 
     public int GetHealth() {
         foreach(Items item in itemList) {
-            tempHP += item.hpUp;
+            tempHP += item.hpUp * item.level;
         }
 
         return tempHP;
@@ -102,9 +95,17 @@ public class Inventory
 
     public float GetROF() {
         foreach(Items item in itemList) {
-            tempROF += item.rofUp;
+            tempROF += item.rofUp * item.level;
         }
 
         return tempROF;
+    }
+
+    public int GetGuns() {
+        foreach(Items item in itemList) {
+            tempGuns += item.moreguns * item.level;
+        }
+
+        return tempGuns;
     }
 }

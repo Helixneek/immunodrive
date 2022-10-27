@@ -22,19 +22,10 @@ public class PlayerMove : MonoBehaviour
     private Inventory inventory;
     Shooter shooter;
 
-    public static PlayerMove Instance { get; private set; }
+    public static PlayerMove instance { get; private set; }
 
     private void Awake() {
         shooter = GetComponent<Shooter>();
-
-        if (Instance != null && Instance != this) 
-        { 
-            Destroy(this); 
-        } 
-        else 
-        { 
-            Instance = this; 
-        } 
     }
 
     void Start() {
@@ -43,12 +34,24 @@ public class PlayerMove : MonoBehaviour
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
 
+        SetSpeed();
+
         Debug.Log(inventory.GetDamage());
     }
 
     void Update()
     {
         Move();
+    }
+
+    void ManageSingleton() {
+        if(instance != null) {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        } else {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     void initBounds() {
@@ -74,5 +77,8 @@ public class PlayerMove : MonoBehaviour
         if(shooter != null) {
             shooter.isFiring = value.isPressed;
         }
+    }
+    void SetSpeed() {
+        MoveSpeed += inventory.GetSpeed();
     }
 }

@@ -11,7 +11,6 @@ public class Shooter : MonoBehaviour
 
     [Header("Player")]
     [SerializeField] float playerFiringRate = 1f;
-    [SerializeField] bool doubleShoot;
 
     [Header("AI")]
     [SerializeField] float enemyFiringRate = 2f;
@@ -26,6 +25,7 @@ public class Shooter : MonoBehaviour
     Coroutine firingCoroutine;
 
     GameObject instance;
+    private Inventory inventory;
 
     void Awake() {
         audioPlayer = FindObjectOfType<AudioPlayer>();
@@ -36,7 +36,11 @@ public class Shooter : MonoBehaviour
         if(useAI) {
             
             isFiring = true;
-        }    
+        }
+        
+        inventory = new Inventory(); 
+
+        SetFireRate();
     }
 
     void Update()
@@ -89,5 +93,9 @@ public class Shooter : MonoBehaviour
             }
             
         }
+    }
+
+    void SetFireRate() {
+        playerFiringRate -= inventory.GetROF();
     }
 }

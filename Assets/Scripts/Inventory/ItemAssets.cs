@@ -14,7 +14,6 @@ public class ItemAssets : MonoBehaviour
     public Sprite SpeedUpSprite;
     public Sprite HealthUpSprite;
     public Sprite FireRateUpSprite;
-    public Sprite ShotModSprite;
     public Sprite MoreGunSprite;
 
 }

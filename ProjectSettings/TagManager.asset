@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GameManager
   layers:
   - Default
   - TransparentFX
@@ -52,4 +53,7 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 616205027
+    locked: 0
+  - name: Main Menu Foreground
+    uniqueID: 619645757
     locked: 0

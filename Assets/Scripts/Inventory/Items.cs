@@ -20,7 +20,7 @@ public class Items
     public float spdUp;
     public int hpUp;
     public float rofUp;
-    public int shotModID;
+    public int moreguns;
 
     public Sprite GetSprite() {
         switch(itemType) {
@@ -29,7 +29,6 @@ public class Items
                 case ItemType.speedUp:      return ItemAssets.Instance.SpeedUpSprite;
                 case ItemType.healthUp:     return ItemAssets.Instance.HealthUpSprite;
                 case ItemType.firerateUp:   return ItemAssets.Instance.FireRateUpSprite;
-                case ItemType.shotMod:      return ItemAssets.Instance.ShotModSprite;
                 case ItemType.moreGuns:     return ItemAssets.Instance.MoreGunSprite;
         }
         

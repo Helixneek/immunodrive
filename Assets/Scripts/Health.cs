@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     [SerializeField] ParticleSystem hitEffect;
     
     [SerializeField] bool applyCameraShake;
+    private Inventory inventory;
     CameraShake cameraShake;
     AudioPlayer audioPlayer;
     ScoreKeeper scoreKeeper;
@@ -26,23 +27,26 @@ public class Health : MonoBehaviour
         levelManager = FindObjectOfType<LevelManager>();
     }
 
+    void Start() {
+        inventory = new Inventory();   
+
+        SetHealth();
+    }
+    
+    void SetHealth() {
+        if(isPlayer) {
+            healthPoints += inventory.GetHealth();
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other) {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
 
-        if(damageDealer != null && isPlayer == false) {
-            TakeDamage(damageDealer.GetPlayerDamage());
-            PlayHitEffect();
-            audioPlayer.PlayDamageClip();
-            ShakeCamera();
-            damageDealer.GetHit();
-
-        } else if(damageDealer != null && isPlayer) {
             TakeDamage(damageDealer.GetDamage());
             PlayHitEffect();
             audioPlayer.PlayDamageClip();
             ShakeCamera();
             damageDealer.GetHit(); 
-        }
     }
 
     void TakeDamage(int damage) {

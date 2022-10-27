@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7729830879576933863}
   - component: {fileID: 1221497733246007317}
   - component: {fileID: 7729830879576933785}
+  - component: {fileID: 8259931918574555474}
   m_Layer: 0
   m_Name: Audio Player
   m_TagString: Untagged
@@ -46,9 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingClip: {fileID: 8300000, guid: 2f826fdf85532c74c880be5a1b79547b, type: 3}
-  shootingVolume: 1
+  shootingVolume: 0.3
   damageClip: {fileID: 0}
   damageVolume: 1
+  buttonClip: {fileID: 8300000, guid: 5150f159c4999d545a9911522b783363, type: 3}
+  buttonVolume: 0.5
 --- !u!82 &7729830879576933785
 AudioSource:
   m_ObjectHideFlags: 0
@@ -145,3 +148,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8259931918574555474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7729830879576933786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c919a321fb9666448bcc6eb18fc9bb57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

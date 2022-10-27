@@ -23,7 +23,7 @@ public class AudioPlayer : MonoBehaviour
     }
 
     public void Awake() {
-        ManageSingleton();
+        //ManageSingleton();
     }
 
     void ManageSingleton() {
