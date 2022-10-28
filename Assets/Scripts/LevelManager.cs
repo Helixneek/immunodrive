@@ -14,7 +14,8 @@ public class LevelManager : MonoBehaviour
 
    public void LoadGame() {
           Debug.Log("Load game");
-          levelToLoad = Random.Range(1, 5);
+          //levelToLoad = Random.Range(1, 5);
+          levelToLoad = 2;
           SceneManager.LoadScene(levelToLoad);
           //FadeToLevel(1);
    }
@@ -23,7 +24,7 @@ public class LevelManager : MonoBehaviour
           Debug.Log("Load options");
 
           PopUpSystem pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpSystem>();
-          pop.PopUp(popUp);
+          pop.PopUp("Volume");
    }
 
    public void LoadNewStage() {
@@ -32,7 +33,12 @@ public class LevelManager : MonoBehaviour
    }
 
    public void LoadMainMenu() {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(0);
+   }
+
+   public void QuitToMainMenu() {
+          SceneManager.LoadScene(0);
+          Time.timeScale = 1;
    }
 
    public void LoadGameOver() {

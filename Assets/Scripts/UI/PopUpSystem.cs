@@ -7,11 +7,20 @@ public class PopUpSystem : MonoBehaviour
 {
     public GameObject popUpBox;
     public Animator animator;
-    public TMP_Text popUpText;
+    public TextMeshProUGUI popUpText;
+    public TextMeshProUGUI upgradeTextA;
+    public TextMeshProUGUI upgradeTextB;
 
     public void PopUp(string text) {
         popUpBox.SetActive(true);
-        //popUpText.text = text;
+        popUpText.text = text;
+        animator.SetTrigger("pop");
+    }
+
+    public void UpgradePop(string textA, string textB) {
+        popUpBox.SetActive(true);
+        upgradeTextA.text = textA;
+        upgradeTextB.text = textB;
         animator.SetTrigger("pop");
     }
 }

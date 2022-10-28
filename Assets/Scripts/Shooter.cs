@@ -37,7 +37,7 @@ public class Shooter : MonoBehaviour
             
             isFiring = true;
         }
-        
+
         inventory = new Inventory(); 
 
         SetFireRate();
@@ -98,4 +98,5 @@ public class Shooter : MonoBehaviour
     void SetFireRate() {
         playerFiringRate -= inventory.GetROF();
     }
+
 }

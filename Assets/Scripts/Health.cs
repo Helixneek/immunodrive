@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] bool isPlayer;
+    [SerializeField] bool isBoss;
     [SerializeField] public int healthPoints = 50;
     [SerializeField] int score = 50;
     [SerializeField] ParticleSystem hitEffect;
@@ -16,21 +17,38 @@ public class Health : MonoBehaviour
     ScoreKeeper scoreKeeper;
     LevelManager levelManager;
 
+    UIUpgrade upgradeUI;
+
+    public static Health instance { get; private set; }
+
     public int GetHealth() {
         return healthPoints;
     }
 
-    void Awake() {
+    public void Awake() {
         cameraShake = Camera.main.GetComponent<CameraShake>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
         levelManager = FindObjectOfType<LevelManager>();
+        upgradeUI = levelManager.GetComponent<UIUpgrade>();
+
+        ManageSingleton();
     }
 
     void Start() {
         inventory = new Inventory();   
 
         SetHealth();
+    }
+
+    void ManageSingleton() {
+        if(instance != null) {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        } else {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
     
     void SetHealth() {
@@ -42,11 +60,11 @@ public class Health : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
 
-            TakeDamage(damageDealer.GetDamage());
-            PlayHitEffect();
-            audioPlayer.PlayDamageClip();
-            ShakeCamera();
-            damageDealer.GetHit(); 
+        TakeDamage(damageDealer.GetDamage());
+        PlayHitEffect();
+        audioPlayer.PlayDamageClip();
+        ShakeCamera();
+        damageDealer.GetHit(); 
     }
 
     void TakeDamage(int damage) {
@@ -59,7 +77,10 @@ public class Health : MonoBehaviour
     }
 
     void Die() {
-        if(!isPlayer) {
+        if(!isPlayer && isBoss) {
+            scoreKeeper.ModifyScore(score);
+            upgradeUI.UpgradeMenuAppear();
+        } else if(!isPlayer) {
             scoreKeeper.ModifyScore(score);
         } else {
             levelManager.LoadGameOver();

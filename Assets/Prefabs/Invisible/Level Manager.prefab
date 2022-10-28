@@ -188,6 +188,8 @@ GameObject:
   - component: {fileID: 7256197673244181534}
   - component: {fileID: 6558457446819252509}
   - component: {fileID: -3164030542791225850}
+  - component: {fileID: -5089515398048989702}
+  - component: {fileID: -2208977259649490060}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -224,6 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: -3164030542791225850}
+  popUp: 
   gameOverLoadDelay: 2
 --- !u!95 &-3164030542791225850
 Animator:
@@ -245,3 +248,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-5089515398048989702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7256197673244181504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9437e0a0332cab34fb8ca0fa2d201fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpBox: {fileID: 0}
+  animator: {fileID: 0}
+  popUpText: {fileID: 0}
+  upgradeTextA: {fileID: 0}
+  upgradeTextB: {fileID: 0}
+--- !u!114 &-2208977259649490060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7256197673244181504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a95424c1a589e4990eb4e421496170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 0}
+  upgradeName:
+  - Upgrade Fire Rate
+  - Upgrade Speed
+  - Upgrade Health
+  - Add More Guns

@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61bcbc440ce33e439ae6e048660764a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 30
+  damageValue: 20
 --- !u!114 &-8131968298001587697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,10 +121,9 @@ MonoBehaviour:
   projectileSpeed: 10
   projectileLifetime: 5
   playerFiringRate: 1
-  doubleShoot: 0
-  enemyFiringRate: 1.2
+  enemyFiringRate: 0.8
   firingRateVariance: 0.2
-  minimumFiringRate: 0.6
+  minimumFiringRate: 0.4
   useAI: 1
   isFiring: 0
 --- !u!114 &130326103023804896
@@ -139,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c0b7bfecbb65d4f8ede3f13d4d6ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveConfig: {fileID: 0}
 --- !u!1 &7601263446856106174
 GameObject:
   m_ObjectHideFlags: 0

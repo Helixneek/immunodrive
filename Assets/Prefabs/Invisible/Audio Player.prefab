@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingClip: {fileID: 8300000, guid: 2f826fdf85532c74c880be5a1b79547b, type: 3}
-  shootingVolume: 0.3
+  shootingVolume: 0.15
   damageClip: {fileID: 0}
   damageVolume: 1
   buttonClip: {fileID: 8300000, guid: 5150f159c4999d545a9911522b783363, type: 3}
@@ -160,3 +160,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c919a321fb9666448bcc6eb18fc9bb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}

@@ -88,8 +88,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  healthPoints: 30
-  score: 50
+  isBoss: 1
+  healthPoints: 500
+  score: 1000
   hitEffect: {fileID: 0}
   applyCameraShake: 0
 --- !u!114 &3710746386284449411
@@ -121,7 +122,6 @@ MonoBehaviour:
   projectileSpeed: 10
   projectileLifetime: 5
   playerFiringRate: 1
-  doubleShoot: 0
   enemyFiringRate: 1.2
   firingRateVariance: 0.2
   minimumFiringRate: 0.6
@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c0b7bfecbb65d4f8ede3f13d4d6ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveConfig: {fileID: 0}
 --- !u!1 &5120727637106098640
 GameObject:
   m_ObjectHideFlags: 0

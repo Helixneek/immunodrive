@@ -24,8 +24,9 @@ public class PlayerMove : MonoBehaviour
 
     public static PlayerMove instance { get; private set; }
 
-    private void Awake() {
+    public void Awake() {
         shooter = GetComponent<Shooter>();
+        ManageSingleton();
     }
 
     void Start() {
@@ -35,8 +36,6 @@ public class PlayerMove : MonoBehaviour
         uiInventory.SetInventory(inventory);
 
         SetSpeed();
-
-        Debug.Log(inventory.GetDamage());
     }
 
     void Update()

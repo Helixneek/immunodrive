@@ -6,6 +6,7 @@ public class PathFinder : MonoBehaviour
 {
     EnemySpawn enemySpawner;
     [SerializeField] WaveConfigSO waveConfig;
+    int waveNum;
     List<Transform> waypoints;
     int waypointIndex = 0;
 
@@ -16,6 +17,7 @@ public class PathFinder : MonoBehaviour
     void Start()
     {
         waveConfig = enemySpawner.GetCurrentWave();
+        waveNum = enemySpawner.GetWaveNumber();
         waypoints = waveConfig.GetWaypoints();
         transform.position = waypoints[waypointIndex].position;
     }
@@ -36,7 +38,11 @@ public class PathFinder : MonoBehaviour
                 waypointIndex++;
             }
         } else {
-            Destroy(gameObject);
+            if(waveNum == 3 || waveNum == 5) {
+                
+            } else {
+                Destroy(gameObject);
+            }
         }
     }
 }

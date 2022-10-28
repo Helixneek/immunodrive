@@ -37,7 +37,7 @@ public class Inventory
                             level = 0,
                             dmgUp = 0,
                             spdUp = 0f,
-                            hpUp = 20,
+                            hpUp = 50,
                             rofUp = 0f,
                             moreguns = 0});
 
@@ -46,7 +46,7 @@ public class Inventory
                             dmgUp = 0,
                             spdUp = 0f,
                             hpUp = 0,
-                            rofUp = 0.05f,
+                            rofUp = 0.1f,
                             moreguns = 0});
         
         AddItem(new Items { itemType = Items.ItemType.moreGuns, 
@@ -103,9 +103,45 @@ public class Inventory
 
     public int GetGuns() {
         foreach(Items item in itemList) {
-            tempGuns += item.moreguns * item.level;
+            tempGuns = item.moreguns * item.level;
         }
 
         return tempGuns;
+    }
+
+    public void SpeedLevelUp() {
+        foreach(Items item in itemList) {
+            if(item.itemType == Items.ItemType.speedUp) {
+                item.level++;
+                break;
+            }
+        }
+    }
+
+    public void HealthLevelUp() {
+        foreach(Items item in itemList) {
+            if(item.itemType == Items.ItemType.healthUp) {
+                item.level++;
+                break;
+            }
+        }
+    }
+
+    public void FireRateLevelUp() {
+        foreach(Items item in itemList) {
+            if(item.itemType == Items.ItemType.firerateUp) {
+                item.level++;
+                break;
+            }
+        }
+    }
+
+    public void GunsLevelUp() {
+        foreach(Items item in itemList) {
+            if(item.itemType == Items.ItemType.moreGuns) {
+                item.level++;
+                break;
+            }
+        }
     }
 }
