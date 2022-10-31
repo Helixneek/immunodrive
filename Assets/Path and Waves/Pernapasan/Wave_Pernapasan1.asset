@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9fc3662b0b890e4c81ac3e295ca52a4, type: 3}
+  m_Name: Wave_Pernapasan1
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 3710746386284449414, guid: ce75337588edd4b43b528ca74777bd96, type: 3}
+  - {fileID: 3710746386284449414, guid: cf0cb61cd46b5f94d820f00d4f3cd322, type: 3}
+  - {fileID: 3710746386284449414, guid: ce75337588edd4b43b528ca74777bd96, type: 3}
+  - {fileID: 3710746386284449414, guid: cf0cb61cd46b5f94d820f00d4f3cd322, type: 3}
+  - {fileID: 3710746386284449414, guid: ce75337588edd4b43b528ca74777bd96, type: 3}
+  - {fileID: 3710746386284449414, guid: cf0cb61cd46b5f94d820f00d4f3cd322, type: 3}
+  - {fileID: 3710746386284449414, guid: ce75337588edd4b43b528ca74777bd96, type: 3}
+  - {fileID: 3710746386284449414, guid: cf0cb61cd46b5f94d820f00d4f3cd322, type: 3}
+  - {fileID: 3710746386284449414, guid: ce75337588edd4b43b528ca74777bd96, type: 3}
+  - {fileID: 3710746386284449414, guid: cf0cb61cd46b5f94d820f00d4f3cd322, type: 3}
+  pathPrefab: {fileID: 8203215817891288376, guid: 3fc0911842dd5ff44bbce23db5ce3f71, type: 3}
+  enemyMoveSpeed: 4
+  timeBetweenSpawn: 0.8
+  spawnTimeVariance: 0
+  minimumSpawnTime: 2

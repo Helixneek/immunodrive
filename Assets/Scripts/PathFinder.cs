@@ -39,7 +39,7 @@ public class PathFinder : MonoBehaviour
             }
         } else {
             if(waveNum == 3 || waveNum == 5) {
-                
+                waypointIndex = 0;
             } else {
                 Destroy(gameObject);
             }

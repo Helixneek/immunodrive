@@ -95,7 +95,7 @@ public class Shooter : MonoBehaviour
         }
     }
 
-    void SetFireRate() {
+    public void SetFireRate() {
         playerFiringRate -= inventory.GetROF();
     }
 

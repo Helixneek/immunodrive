@@ -5,16 +5,20 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour
 {
     [SerializeField] List<WaveConfigSO> waveConfigs;
+    [SerializeField] WaveConfigSO finalBossConfig;
     [SerializeField] float timeBetweenWaves = 0f;
     [SerializeField] float BossTime = 0f;
     [SerializeField] float timeBeforeStart = 0f;
     [SerializeField] bool isLooping;
     public int waveNum = 0;
+    int stageIndex;
     WaveConfigSO currentWave;
 
     void Start()
     {
+        stageIndex = FindObjectOfType<StageTracker>().GetStageIndex();
        StartCoroutine(SpawnEnemyWaves());
+       Debug.Log("Stage " + stageIndex);
     }
 
     public WaveConfigSO GetCurrentWave() {
@@ -31,9 +35,13 @@ public class EnemySpawn : MonoBehaviour
 
         do {
             foreach(WaveConfigSO waves in waveConfigs) {
-                currentWave = waves;
                 waveNum++;
-
+                if(stageIndex > 4 && waveNum == 5) {
+                    currentWave = finalBossConfig;
+                } else {
+                    currentWave = waves;
+                }
+                
                 for(int i = 0; i < currentWave.GetEnemyCount(); i++) {
                     Instantiate(currentWave.GetEnemyPrefabs(i), 
                             currentWave.GetStartingWaypoint().position,

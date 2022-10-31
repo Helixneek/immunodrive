@@ -8,10 +8,11 @@ public class UIUpgrade : MonoBehaviour
 {
     PopUpSystem pop;
     PlayerMove playerMove;
+    Health health;
     Shooter shooter;
     [SerializeField] private UI_Inventory uiInventory;
     private Inventory inventory;
-    float delay = 2f;
+    float delay = 1f;
 
     public Text txt;
     string upgradeChosenA;
@@ -21,6 +22,7 @@ public class UIUpgrade : MonoBehaviour
     void Awake() {
         playerMove = FindObjectOfType<PlayerMove>();
         shooter = FindObjectOfType<Shooter>();
+        health = FindObjectOfType<Health>();
     }
 
     void Start() {
@@ -35,58 +37,58 @@ public class UIUpgrade : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         pop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpSystem>();
-        upgradeChosenA = upgradeName[Random.Range(0, upgradeName.Count - 1)];
-        upgradeChosenB = upgradeName[Random.Range(0, upgradeName.Count - 1)];
+        upgradeChosenA = upgradeName[Random.Range(0, upgradeName.Count)];
+        upgradeChosenB = upgradeName[Random.Range(0, upgradeName.Count)];
         // Random.Range(0, upgradeName.Count)
 
         pop.UpgradePop(upgradeChosenA, upgradeChosenB);
     }
 
     public void LevelIncreaseA() {
-        Time.timeScale = 0;
-
         switch(upgradeChosenA) {
             case "Upgrade Speed":
                 inventory.SpeedLevelUp();
                 uiInventory.SetInventory(inventory);
-                Time.timeScale = 1;
+                playerMove.SetSpeed();
                 break;
             
             case "Upgrade Health":
                 inventory.HealthLevelUp();
                 uiInventory.SetInventory(inventory);
-                Time.timeScale = 1;
+                health.SetHealth();
                 break;
 
             case "Upgrade Fire Rate":
                 inventory.FireRateLevelUp();
                 uiInventory.SetInventory(inventory);
-                Time.timeScale = 1;
+                shooter.SetFireRate();
                 break;
 
             case "Add More Guns":
                 inventory.GunsLevelUp();
                 uiInventory.SetInventory(inventory);
-                Time.timeScale = 1;
                 break;
         }
     }
 
     public void LevelIncreaseB() {
-        switch(upgradeChosenA) {
+        switch(upgradeChosenB) {
             case "Upgrade Speed":
                 inventory.SpeedLevelUp();
                 uiInventory.SetInventory(inventory);
+                playerMove.SetSpeed();
                 break;
             
             case "Upgrade Health":
                 inventory.HealthLevelUp();
                 uiInventory.SetInventory(inventory);
+                health.SetHealth();
                 break;
 
             case "Upgrade Fire Rate":
                 inventory.FireRateLevelUp();
                 uiInventory.SetInventory(inventory);
+                shooter.SetFireRate();
                 break;
 
             case "Add More Guns":

@@ -22,6 +22,9 @@ public class PlayerMove : MonoBehaviour
     private Inventory inventory;
     Shooter shooter;
 
+    [Header("Level Tracking")]
+    [SerializeField] int currentlevelIndex;
+
     public static PlayerMove instance { get; private set; }
 
     public void Awake() {
@@ -77,7 +80,7 @@ public class PlayerMove : MonoBehaviour
             shooter.isFiring = value.isPressed;
         }
     }
-    void SetSpeed() {
+    public void SetSpeed() {
         MoveSpeed += inventory.GetSpeed();
     }
 }

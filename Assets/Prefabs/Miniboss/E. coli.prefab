@@ -172,8 +172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  isBoss: 1
-  healthPoints: 30
+  isMiniBoss: 1
+  isBoss: 0
+  isFinalBoss: 0
+  healthPoints: 200
   score: 50
   hitEffect: {fileID: 0}
   applyCameraShake: 0
@@ -189,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61bcbc440ce33e439ae6e048660764a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 30
+  damageValue: 999999
 --- !u!114 &-8131968298001587697
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -686,10 +686,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45d64dc8adb7ab40864d69ad5ab5e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 0
+  isPlayer: 1
   isBoss: 0
-  healthPoints: 50
-  score: 50
+  isFinalBoss: 0
+  healthPoints: 100
+  score: 0
   hitEffect: {fileID: 0}
   applyCameraShake: 1
 --- !u!114 &4510634566752428462
@@ -707,7 +708,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8271087291294012158, guid: 687c9946bf0e87d449cd3390a93de9c6, type: 3}
   projectileSpeed: 10
   projectileLifetime: 5
-  playerFiringRate: 0.5
+  playerFiringRate: 0.4
   enemyFiringRate: 2
   firingRateVariance: 0
   minimumFiringRate: 0.1
@@ -731,6 +732,7 @@ MonoBehaviour:
   paddingTop: 1
   paddingBottom: 1
   uiInventory: {fileID: 0}
+  currentlevelIndex: 0
 --- !u!114 &4510634566752428464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,9 +776,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
-  m_Direction: 0
+  m_Offset: {x: 0.013042924, y: -0.035946973}
+  m_Size: {x: 1.0804415, y: 0.4955492}
+  m_Direction: 1
 --- !u!50 &7395473031543794253
 Rigidbody2D:
   serializedVersion: 4
@@ -827,7 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc58669f24e41d48a5dea92f721a875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paused: 0
+  pauseMenu: {fileID: 0}
+  isPaused: 0
 --- !u!1 &5397166902185218114
 GameObject:
   m_ObjectHideFlags: 0

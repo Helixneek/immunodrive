@@ -1,0 +1,783 @@
+fileFormatVersion: 2
+guid: ca2854fdba8bb3648aec48bd1250130a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1169
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced4c7f8768aac64ba3abea34f0da234
+      internalID: 1752218512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1169
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa3e72ab9d8c3e4dbf7059f895314bd
+      internalID: -1335938513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_2
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1169
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cace50a261195e94ba13a8a2fea5f997
+      internalID: 1155395098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_3
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1169
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e56cfe442afbd4fa3082793b0065ae
+      internalID: 24206252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_4
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1169
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a80c069474a82429f19869471a8d54
+      internalID: 1913062609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 974
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e94f60eee32cff47985f68041c110f2
+      internalID: -1498617217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 974
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5cb49935da5364f996dffadabb4f9e
+      internalID: -94051436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_7
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 974
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0a0141668c04848882e02ca8be5c09
+      internalID: -943227926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_8
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 974
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4126abc0c33aeab4ea2986f9fde8e14d
+      internalID: 1910949409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_9
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 974
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce952a6979f232a4ab6d8bb967c2eccb
+      internalID: 370460583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 779
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7191c745fc0108c49bf64886cef56f60
+      internalID: 635758501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_11
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 779
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e0e76dbbeac4d4a92d0a1f58ba7372
+      internalID: 1758127394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_12
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 779
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082da2eb89e90b44e8d8852f39aca930
+      internalID: 813863597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_13
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 779
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da0fad9d1101934387ecb5eef2d26c3
+      internalID: -437566937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_14
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 779
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ec391055728c042b47e28b7f86e05e
+      internalID: -883862344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 584
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd143dc3747d3846b4b28673ced79cd
+      internalID: -379361803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_16
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 584
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1393591d861c42d48bbef2701f06593b
+      internalID: 1150642660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_17
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 584
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d2ca6c7e3f47943bfc11628d37226e
+      internalID: 896721119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_18
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 584
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d36389a4179a7b46b812c0aed840852
+      internalID: -1737012513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_19
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 584
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c832ae7c1b687654aa493586866c5492
+      internalID: -357257105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 389
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb3d9b9cbebc6846ba3cf0931f1531d
+      internalID: -1172864528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_21
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 389
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c9079831422b648a7e787c9bace440
+      internalID: -255205970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_22
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 389
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6dfb6af9b582f44adc146452980af2
+      internalID: -467276332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_23
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 389
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d910a5405561cb47b036b9f2ee3b528
+      internalID: 1559745873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_24
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 389
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b2b1d8141a0b6469ddafc893ca6503
+      internalID: 2099651976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 194
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e6a048073d30c4f9350974fecac0fd
+      internalID: 144159095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_26
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 194
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad286f80da85c954d970fda6fada4b88
+      internalID: -1079447175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_27
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 194
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113526fbb5092c54d85a2694e599a125
+      internalID: -119333831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_28
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 194
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fef47186b0514943bf28c98664d4090
+      internalID: -148226503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000a BrightFlaredarkGrey001_29
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 194
+        width: 175
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4667a85bc55a84d43a5534b17be778f9
+      internalID: -825550408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      000a BrightFlaredarkGrey001_21: -255205970
+      000a BrightFlaredarkGrey001_22: -467276332
+      000a BrightFlaredarkGrey001_3: 24206252
+      000a BrightFlaredarkGrey001_14: -883862344
+      000a BrightFlaredarkGrey001_15: -379361803
+      000a BrightFlaredarkGrey001_8: 1910949409
+      000a BrightFlaredarkGrey001_4: 1913062609
+      000a BrightFlaredarkGrey001_6: -94051436
+      000a BrightFlaredarkGrey001_16: 1150642660
+      000a BrightFlaredarkGrey001_17: 896721119
+      000a BrightFlaredarkGrey001_24: 2099651976
+      000a BrightFlaredarkGrey001_9: 370460583
+      000a BrightFlaredarkGrey001_12: 813863597
+      000a BrightFlaredarkGrey001_26: -1079447175
+      000a BrightFlaredarkGrey001_19: -357257105
+      000a BrightFlaredarkGrey001_27: -119333831
+      000a BrightFlaredarkGrey001_5: -1498617217
+      000a BrightFlaredarkGrey001_13: -437566937
+      000a BrightFlaredarkGrey001_1: -1335938513
+      000a BrightFlaredarkGrey001_0: 1752218512
+      000a BrightFlaredarkGrey001_25: 144159095
+      000a BrightFlaredarkGrey001_7: -943227926
+      000a BrightFlaredarkGrey001_20: -1172864528
+      000a BrightFlaredarkGrey001_10: 635758501
+      000a BrightFlaredarkGrey001_28: -148226503
+      000a BrightFlaredarkGrey001_18: -1737012513
+      000a BrightFlaredarkGrey001_2: 1155395098
+      000a BrightFlaredarkGrey001_11: 1758127394
+      000a BrightFlaredarkGrey001_29: -825550408
+      000a BrightFlaredarkGrey001_23: 1559745873
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

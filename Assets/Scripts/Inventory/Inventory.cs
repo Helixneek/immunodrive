@@ -81,7 +81,7 @@ public class Inventory
         foreach(Items item in itemList) {
             tempSpeed += item.spdUp * item.level;
         }
-
+        
         return tempSpeed;
     }
 

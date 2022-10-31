@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9fc3662b0b890e4c81ac3e295ca52a4, type: 3}
+  m_Name: Wave1_Ginjal
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 3710746386284449414, guid: f93a33bf9a9f42648bc4f9b26db3add8, type: 3}
+  - {fileID: 3710746386284449414, guid: fb0dcc91f0489b3498610069b64a948f, type: 3}
+  - {fileID: 3710746386284449414, guid: fb0dcc91f0489b3498610069b64a948f, type: 3}
+  - {fileID: 3710746386284449414, guid: f93a33bf9a9f42648bc4f9b26db3add8, type: 3}
+  - {fileID: 3710746386284449414, guid: fb0dcc91f0489b3498610069b64a948f, type: 3}
+  - {fileID: 3710746386284449414, guid: fb0dcc91f0489b3498610069b64a948f, type: 3}
+  - {fileID: 3710746386284449414, guid: f93a33bf9a9f42648bc4f9b26db3add8, type: 3}
+  - {fileID: 3710746386284449414, guid: fb0dcc91f0489b3498610069b64a948f, type: 3}
+  - {fileID: 3710746386284449414, guid: f93a33bf9a9f42648bc4f9b26db3add8, type: 3}
+  - {fileID: 3710746386284449414, guid: f93a33bf9a9f42648bc4f9b26db3add8, type: 3}
+  pathPrefab: {fileID: 4441021317000408329, guid: 938c979f586dbb145a77543eff20f7b8, type: 3}
+  enemyMoveSpeed: 3
+  timeBetweenSpawn: 1
+  spawnTimeVariance: 0
+  minimumSpawnTime: 2

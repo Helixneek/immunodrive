@@ -6,19 +6,35 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
      public Animator animator;
-
      int levelToLoad;
+     int previousLevel;
      public string popUp;
      
     [SerializeField] float gameOverLoadDelay = 2f;
+    [SerializeField] float nextGameDelay = 2f;
 
    public void LoadGame() {
           Debug.Log("Load game");
-          //levelToLoad = Random.Range(1, 5);
-          levelToLoad = 2;
+          levelToLoad = Random.Range(1, 5);
+          previousLevel = SceneManager.GetActiveScene().buildIndex;
+          while(levelToLoad == previousLevel) {
+               levelToLoad = Random.Range(1, 5);
+          }
+
+          FindObjectOfType<StageTracker>().NextStage();
           SceneManager.LoadScene(levelToLoad);
-          //FadeToLevel(1);
    }
+
+     public void LoadNextLevel() {
+          levelToLoad = Random.Range(1, 5);
+          previousLevel = SceneManager.GetActiveScene().buildIndex;
+          while(levelToLoad == previousLevel) {
+               levelToLoad = Random.Range(1, 5);
+          }
+
+          FindObjectOfType<StageTracker>().NextStage();
+          StartCoroutine(WaitAndLoad(levelToLoad, nextGameDelay));
+     }
 
    public void LoadOptions() {
           Debug.Log("Load options");
@@ -27,9 +43,9 @@ public class LevelManager : MonoBehaviour
           pop.PopUp("Volume");
    }
 
-   public void LoadNewStage() {
-          levelToLoad = Random.Range(1, 5);
-          SceneManager.LoadScene(levelToLoad);
+   public void LoadControls() {
+          PopUpSystem controlpop = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PopUpSystem>();
+          controlpop.ControlPop();
    }
 
    public void LoadMainMenu() {
@@ -42,7 +58,7 @@ public class LevelManager : MonoBehaviour
    }
 
    public void LoadGameOver() {
-        StartCoroutine(WaitAndLoad(0, gameOverLoadDelay));
+        StartCoroutine(WaitAndLoad(6, gameOverLoadDelay));
    }
 
    public void QuitGame() {

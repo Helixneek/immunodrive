@@ -5,7 +5,9 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] bool isPlayer;
+    [SerializeField] bool isMiniBoss;
     [SerializeField] bool isBoss;
+    [SerializeField] bool isFinalBoss;
     [SerializeField] public int healthPoints = 50;
     [SerializeField] int score = 50;
     [SerializeField] ParticleSystem hitEffect;
@@ -25,7 +27,7 @@ public class Health : MonoBehaviour
         return healthPoints;
     }
 
-    public void Awake() {
+    void Awake() {
         cameraShake = Camera.main.GetComponent<CameraShake>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
@@ -42,16 +44,16 @@ public class Health : MonoBehaviour
     }
 
     void ManageSingleton() {
-        if(instance != null) {
+        if(instance != null && isPlayer) {
             gameObject.SetActive(false);
             Destroy(gameObject);
-        } else {
+        } else if(isPlayer) {
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
     }
     
-    void SetHealth() {
+    public void SetHealth() {
         if(isPlayer) {
             healthPoints += inventory.GetHealth();
         }
@@ -77,7 +79,14 @@ public class Health : MonoBehaviour
     }
 
     void Die() {
-        if(!isPlayer && isBoss) {
+        if(!isPlayer && isFinalBoss) {
+            scoreKeeper.ModifyScore(score);
+            levelManager.LoadGameOver();
+        } else if(!isPlayer && isBoss) {
+            scoreKeeper.ModifyScore(score);
+            upgradeUI.UpgradeMenuAppear();
+            levelManager.LoadNextLevel();
+        } else if(!isPlayer && isMiniBoss) {
             scoreKeeper.ModifyScore(score);
             upgradeUI.UpgradeMenuAppear();
         } else if(!isPlayer) {

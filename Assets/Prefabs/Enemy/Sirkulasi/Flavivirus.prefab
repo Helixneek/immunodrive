@@ -88,9 +88,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
+  isMiniBoss: 0
+  isBoss: 0
+  isFinalBoss: 0
   healthPoints: 60
   score: 100
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 3266768574943825724, guid: 685f94033a905cd45b6e7710c886c779, type: 3}
   applyCameraShake: 0
 --- !u!114 &3710746386284449411
 MonoBehaviour:
@@ -121,9 +124,9 @@ MonoBehaviour:
   projectileSpeed: 10
   projectileLifetime: 5
   playerFiringRate: 1
-  enemyFiringRate: 1.2
+  enemyFiringRate: 0.8
   firingRateVariance: 0.1
-  minimumFiringRate: 0.8
+  minimumFiringRate: 0.6
   useAI: 1
   isFiring: 0
 --- !u!114 &130326103023804896
